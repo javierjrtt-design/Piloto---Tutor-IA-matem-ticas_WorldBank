@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Estratégico: Tutor IA Matemáticas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Urbanist', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(222, 255, 154, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: #deff9a;
+            transform: translateY(-4px);
+            background: rgba(30, 41, 59, 0.85);
+        }
+        .accent-text { color: #deff9a; }
+        .accent-bg { background-color: #deff9a; }
+        .step-active { border-left: 4px solid #deff9a; }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-btn.active { 
+            border-bottom: 3px solid #deff9a;
+            color: #deff9a;
+        }
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fade-in 0.4s ease-out forwards; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #deff9a; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- HEADER / PERFIL -->
+    <header class="max-w-7xl mx-auto mb-10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="animate-fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold">Piloto Tutor <span class="accent-text">IA Matemáticas</span></h1>
+            <p class="text-slate-400 text-lg mt-2 font-light">Estrategia Senior: Mag. Javier Trigoso | Banco Mundial</p>
+        </div>
+        <div class="glass-card p-4 rounded-2xl flex items-center gap-4 animate-fade-in" style="animation-delay: 0.1s;">
+            <div class="w-12 h-12 accent-bg rounded-full flex items-center justify-center text-slate-900 shadow-[0_0_15px_rgba(222,255,154,0.3)]">
+                <i class="fa-solid fa-user-tie text-2xl"></i>
+            </div>
+            <div>
+                <p class="font-bold text-lg leading-none">Javier Trigoso</p>
+                <p class="text-[10px] accent-text uppercase tracking-[0.2em] mt-1 font-semibold">Google Certified Trainer</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- COLUMNA IZQUIERDA: ESTRATEGIA Y RIESGOS -->
+        <div class="lg:col-span-4 space-y-6">
+            <h2 class="text-2xl font-semibold mb-4 px-2 flex items-center gap-3">
+                <i class="fa-solid fa-rocket accent-text"></i> Ejecución Estratégica
+            </h2>
+            
+            <div class="space-y-4">
+                <div class="glass-card p-6 rounded-2xl step-active animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold uppercase tracking-tighter accent-text">Kick-off</span>
+                        <span class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-300">Viernes 06</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">Alineación & Viabilidad</h3>
+                    <p class="text-sm text-slate-400">Validación de infraestructura escolar (Cesar Calixto) y KPIs de impacto inmediato.</p>
+                </div>
+
+                <!-- QUICK WINS -->
+                <div class="glass-card p-6 rounded-2xl bg-emerald-950/20 border-emerald-500/30 animate-fade-in" style="animation-delay: 0.3s;">
+                    <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-bolt accent-text"></i> Acciones Inmediatas (48h)
+                    </h3>
+                    <ul class="text-xs space-y-3 text-slate-300">
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check accent-text text-xs"></i> Auditoría de prompts para Fichas 1 y 2.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check accent-text text-xs"></i> Mapeo de distractores en Probabilidad Condicional.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check accent-text text-xs"></i> Setup de monitoreo docente vía Google Sheets.</li>
+                    </ul>
+                </div>
+
+                <!-- INDICADORES DE ÉXITO -->
+                <div class="glass-card p-6 rounded-2xl animate-fade-in" style="animation-delay: 0.4s;">
+                    <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie accent-text"></i> Indicadores de Éxito (KPIs)
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-3 bg-slate-800/50 rounded-xl">
+                            <p class="text-2xl font-bold accent-text">+80%</p>
+                            <p class="text-[10px] text-slate-500 uppercase font-bold">Adopción Docente</p>
+                        </div>
+                        <div class="text-center p-3 bg-slate-800/50 rounded-xl">
+                            <p class="text-2xl font-bold accent-text">-30%</p>
+                            <p class="text-[10px] text-slate-500 uppercase font-bold">Tiempo de Carga</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIESGOS -->
+                <div class="glass-card p-6 rounded-2xl animate-fade-in" style="animation-delay: 0.5s;">
+                    <h3 class="font-bold text-lg mb-3 flex items-center gap-2 text-orange-400">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Gestión de Riesgos
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="text-[11px] p-2 bg-orange-950/10 rounded-lg border border-orange-500/20">
+                            <p class="text-slate-200 font-semibold">Conectividad Inestable</p>
+                            <p class="text-slate-500">Mitigación: Caché local y diseño de prompts de baja latencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: DASHBOARD DE CONTENIDO -->
+        <div class="lg:col-span-8 space-y-8 animate-fade-in" style="animation-delay: 0.2s;">
+            
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="flex border-b border-slate-700 mb-6 overflow-x-auto no-scrollbar">
+                    <button onclick="openTab(event, 'pedagogia')" class="tab-btn active px-6 py-3 font-semibold whitespace-nowrap transition-all">Propuesta Pedagógica</button>
+                    <button onclick="openTab(event, 'curriculo')" class="tab-btn px-6 py-3 font-semibold whitespace-nowrap transition-all">Matriz & Fichas MINEDU</button>
+                    <button onclick="openTab(event, 'tecnico')" class="tab-btn px-6 py-3 font-semibold whitespace-nowrap transition-all">Ecosistema Tecnológico</button>
+                </div>
+
+                <!-- CONTENIDO PEDAGOGÍA -->
+                <div id="pedagogia" class="tab-content active animate-fade-in">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-5 bg-slate-800/50 rounded-xl border-l-4 border-emerald-400">
+                            <h4 class="font-bold accent-text mb-2">Worked Examples First</h4>
+                            <p class="text-sm text-slate-300 font-light">Reducción drástica de la carga cognitiva. El alumno observa el "Ejemplo A" de la ficha antes de resolver el reto.</p>
+                        </div>
+                        <div class="p-5 bg-slate-800/50 rounded-xl border-l-4 border-emerald-400">
+                            <h4 class="font-bold accent-text mb-2">Tutoría Socrática Activa</h4>
+                            <p class="text-sm text-slate-300 font-light">Diagnóstico del error de lógica. La IA detecta distractores típicos (ej. no reducir el espacio muestral).</p>
+                        </div>
+                        <div class="p-5 bg-slate-800/50 rounded-xl border-l-4 border-emerald-400">
+                            <h4 class="font-bold accent-text mb-2">Andamiaje (Scaffolding)</h4>
+                            <p class="text-sm text-slate-300 font-light">Desglose de problemas de la Ficha en pasos mínimos, aumentando la autoeficacia del estudiante.</p>
+                        </div>
+                        <div class="p-5 bg-slate-800/50 rounded-xl border-l-4 border-emerald-400">
+                            <h4 class="font-bold accent-text mb-2">Contexto Ecolegios</h4>
+                            <p class="text-sm text-slate-300 font-light">Matemática con propósito: los retos de la matriz se conectan con el ahorro de energía y reciclaje.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENIDO CURRÍCULO -->
+                <div id="curriculo" class="tab-content animate-fade-in">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-5 p-5 bg-slate-800/30 rounded-2xl border border-slate-700/50">
+                            <i class="fa-solid fa-layer-group text-4xl accent-text"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Mapeo de Contenidos: Fichas 5to Secundaria</h4>
+                                <p class="text-sm text-slate-400">Integración de situaciones significativas del MINEDU para validación en aula pública.</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 bg-slate-900 rounded-xl border border-slate-700 hover:border-emerald-500/50 transition-colors">
+                                <h5 class="font-bold text-emerald-300 mb-1">Prog. Lineal</h5>
+                                <p class="text-[11px] text-slate-500 leading-relaxed italic">Ficha 5: "Optimizando costos en la producción de residuos".</p>
+                            </div>
+                            <div class="p-4 bg-slate-900 rounded-xl border border-slate-700 hover:border-emerald-500/50 transition-colors">
+                                <h5 class="font-bold text-emerald-300 mb-1">Geom. Analítica</h5>
+                                <p class="text-[11px] text-slate-500 leading-relaxed italic">Ficha 3: "Localización de puntos estratégicos de ahorro de agua".</p>
+                            </div>
+                            <div class="p-4 bg-slate-900 rounded-xl border border-slate-700 hover:border-emerald-500/50 transition-colors">
+                                <h5 class="font-bold text-emerald-300 mb-1">Probabilidad</h5>
+                                <p class="text-[11px] text-slate-500 leading-relaxed italic">Ficha 8: "Probabilidad condicional en la toma de decisiones".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENIDO TÉCNICO -->
+                <div id="tecnico" class="tab-content animate-fade-in">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="glass-card p-5 rounded-xl border-l-4 border-sky-400">
+                            <h5 class="text-sm font-bold flex items-center gap-2 mb-2 text-sky-400">
+                                <i class="fa-solid fa-code"></i> Arquitectura LLM
+                            </h5>
+                            <p class="text-xs text-slate-400 leading-relaxed">Uso de Gemini 1.5 Pro con "System Instructions" robustas para controlar alucinaciones matemáticas.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-xl border-l-4 border-sky-400">
+                            <h5 class="text-sm font-bold flex items-center gap-2 mb-2 text-sky-400">
+                                <i class="fa-solid fa-table-columns"></i> Google Ecosystem
+                            </h5>
+                            <p class="text-xs text-slate-400 leading-relaxed">Login vía SSO aprendoencasa.pe e integración de analíticos en Looker Studio para el docente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIMULACIÓN DE PROMPT -->
+            <div class="glass-card p-8 rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 border-l-4 border-emerald-400 shadow-xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-terminal text-emerald-400"></i> Engine Demo: Retroalimentación Diferenciada
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-3">
+                        <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Input del Estudiante (Ficha 5)</p>
+                        <div class="p-4 bg-slate-950 rounded-xl text-sm italic text-slate-300 border border-slate-800">
+                            "Si el total de botellas son 100, la probabilidad de que sea limpia es 70/100, ¿verdad?"
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest">Respuesta Tutor IA (Configurado)</p>
+                        <div class="p-4 bg-emerald-950/30 rounded-xl text-sm text-emerald-100 border border-emerald-900/50 shadow-inner">
+                            "Vas por buen camino identificando las limpias. Pero recuerda: **se sabe que la botella es de plástico**. ¿Cuántas son de plástico en total? ¿Sigues dividiendo entre 100?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="max-w-7xl mx-auto mt-12 mb-10 text-center border-t border-slate-800 pt-8">
+        <div class="flex flex-col items-center gap-2">
+            <p class="text-slate-500 text-sm font-light">Consultoría Senior para el Piloto de Tutoría IA 2026</p>
+            <div class="flex gap-4">
+                <span class="text-[10px] text-slate-600 border border-slate-800 px-2 py-1 rounded italic">Métrica: Alta Disponibilidad</span>
+                <span class="text-[10px] text-slate-600 border border-slate-800 px-2 py-1 rounded italic">Foco: Reducción de Brechas</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
